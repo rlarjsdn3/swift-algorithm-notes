@@ -1,15 +1,11 @@
-## Swift Competitive Programming Team Notes
+## Swift Algorithm Notes
 
-* This repository is a python library for PS(Problem-Solving) Competition.
+* 알고리즘 학습과 BOJ 문제 풀이를 위한 스위프트 (Swift) 소스코드 저장소입니다.
+* This repository is a swift library for Algorithm_learning and BOJ PS(Problem-Solving).
 * When you need an implementation of a specific algorithm, please let me know.
-* 알고리즘 대회를 위한 파이썬 (Python) 소스코드 저장소입니다.
 
 ## Contents
 
-### Sorting
+### Stack
 
-* [Selection Sort](/Sorting/selection_sort.py)
-* [Insertion Sort](/Sorting/insertion_sort.py)
-* [Quick Sort](/Sorting/quick_sort.py)
-* [Counting Sort](/Sorting/counting_sort.py)
-* [Python Sort Library](/Sorting/python_sort_library.py)
+* [Stack](/Sorting/selection_sort.py)
