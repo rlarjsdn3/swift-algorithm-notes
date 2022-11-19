@@ -7,12 +7,12 @@ struct Stack<Element> {
         return items.isEmpty
     }
     
-    // 스택의 맨 뒤에 요소 삽입
+    // 배열의 맨 뒤에 요소 삽입
     public mutating func push(_ element: Element) {
         items.append(element)
     }
     
-    // 스택의 맨 뒤의 요소 삭제
+    // 배열의 맨 뒤의 요소 삭제
     public mutating func pop() -> Element? {
         guard !isEmpty else {
             return nil
