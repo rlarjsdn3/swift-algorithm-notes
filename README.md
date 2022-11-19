@@ -8,4 +8,4 @@
 
 ### Stack
 
-* [ArrayStack](/Sorting/Stack/ArrayStack.swift)
+* [ArrayStack](//Stack/ArrayStack.swift)
