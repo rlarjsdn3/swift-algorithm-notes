@@ -10,6 +10,6 @@
 
 * [ArrayStack](/Stack/ArrayStack.swift)
 
-### Queue
+### LinkedList
 
 * [LinkedQueue](/)
