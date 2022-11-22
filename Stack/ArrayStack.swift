@@ -23,6 +23,16 @@ struct Stack<Element> {
         
         return items.removeLast()
     }
+    
+    // 시간 복잡도: O(1)
+    // 배열의 맨 뒤의 요소 반환
+    public func peek() -> Element? {
+        guard !isEmpty else {
+            return nil
+        }
+        
+        return items.last
+    }
 }
 
 extension Stack: CustomStringConvertible {
