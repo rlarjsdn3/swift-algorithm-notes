@@ -12,4 +12,4 @@
 
 ### LinkedList
 
-* [LinkedQueue](/)
+* [LinkedQueue](/LinkedList/LinkedQueue.swift)
