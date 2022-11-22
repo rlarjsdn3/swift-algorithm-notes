@@ -1,6 +1,6 @@
 import Foundation
 
-// 리스트 노드 구조를 정의한 클래스
+// 노드 구조를 정의한 클래스
 class Node<Element> {
     var data: Element? // 데이터를 저장하는 변수
     var next: Node<Element>? // 다음 리스트를 가리키는 변수
