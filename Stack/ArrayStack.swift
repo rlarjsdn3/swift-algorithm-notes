@@ -2,8 +2,12 @@ struct Stack<Element> {
     // 요소를 저장할 배열
     private var items: [Element] = []
     
-    // 시간 복잡도: O(1)
-    // 스택이 비어있으면 true, 비어있지 않다면 false를 반환
+    // 배열에 삽입된 요소의 개수를 반환
+    public var count: Int {
+        return items.count
+    }
+    
+    // 배열이 비어있으면 true, 비어있지 않다면 false를 반환
     public var isEmpty: Bool {
         return items.isEmpty
     }
@@ -16,6 +20,7 @@ struct Stack<Element> {
     
     // 시간 복잡도: O(1)
     // 배열의 맨 뒤의 요소 삭제
+    @discardableResult
     public mutating func pop() -> Element? {
         guard !isEmpty else {
             return nil
@@ -32,11 +37,5 @@ struct Stack<Element> {
         }
         
         return items.last
-    }
-}
-
-extension Stack: CustomStringConvertible {
-    public var description: String {
-        return items.description
     }
 }
