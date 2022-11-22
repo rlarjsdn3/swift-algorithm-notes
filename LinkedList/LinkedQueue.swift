@@ -1,11 +1,11 @@
 import Foundation
 
-// 노드 구조를 정의한 클래스
+// 리스트 노드 구조를 정의한 클래스
 class Node<Element> {
-    var data: Element? // 데이터를 저장하는 변수
+    var data: Element // 데이터를 저장하는 변수
     var next: Node<Element>? // 다음 리스트를 가리키는 변수
     
-    init(_ data: Element? = nil, next: Node<Element>? = nil) {
+    init(_ data: Element, next: Node<Element>? = nil) {
         self.data = data
         self.next = next
     }
@@ -50,3 +50,24 @@ class LinkedQueue<Element> {
         return removed
     }
 }
+
+extension LinkedQueue: CustomStringConvertible {
+    public var description: String {
+        var text: String = "["
+        var node: Node<Element>? = head
+
+        while node != nil {
+            text += "\(node!.data)"
+            node = node?.next
+            if node != nil { text += ", " }
+        }
+
+        return text + "]"
+    }
+}
+
+// 2022. 11. 22 업데이트
+// - CustomStringConvertible 프로토콜을 준수하는 LinkedQueue 확장 추가
+
+// 예정
+// - 서브스크립트로 노드를 수정하고 불러내는 연산 추가
