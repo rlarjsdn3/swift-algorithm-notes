@@ -1,3 +1,7 @@
+//
+// Created by 김건우 on 2022/11/19.
+//
+
 import Foundation
 
 // 리스트 노드 구조를 정의한 클래스
@@ -36,6 +40,7 @@ class LinkedQueue<Element> {
     
     // 리스트의 맨 앞의 요소 반환
     // 시간 복잡도: O(1)
+    @discardableResult
     public func dequeue() -> Element? {
         guard !isEmpty else {
             return nil
@@ -49,6 +54,8 @@ class LinkedQueue<Element> {
         
         return removed
     }
+    
+    // 서브스크립트 추가 예정
 }
 
 extension LinkedQueue: CustomStringConvertible {
@@ -66,8 +73,6 @@ extension LinkedQueue: CustomStringConvertible {
     }
 }
 
+
 // 2022. 11. 22 업데이트
 // - CustomStringConvertible 프로토콜을 준수하는 LinkedQueue 확장 추가
-
-// 예정
-// - 서브스크립트로 노드를 수정하고 불러내는 연산 추가
