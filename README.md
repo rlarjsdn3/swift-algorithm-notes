@@ -9,3 +9,7 @@
 ### Stack
 
 * [ArrayStack](/Stack/ArrayStack.swift)
+
+### Queue
+
+* [LinkedQueue](/)
