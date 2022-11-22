@@ -1,7 +1,3 @@
-//
-// Created by 김건우 on 2022/11/19.
-//
-
 import Foundation
 
 // 리스트 노드 구조를 정의한 클래스
