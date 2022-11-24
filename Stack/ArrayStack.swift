@@ -39,3 +39,16 @@ struct Stack<Element> {
         return items.last
     }
 }
+
+// 배열 요소를 출력하기 위한 확장
+extension Stack: CustomStringConvertible {
+    var description: String {
+        var text: String = "["
+        for (i, e) in items.enumerated() {
+            text += String(describing: e)
+            if n != items.count-1 { text += ", " }
+        }
+        
+        return text + "]"
+    }
+}
