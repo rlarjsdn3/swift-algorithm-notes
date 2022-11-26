@@ -7,8 +7,9 @@
 ## Contents
 
 ### Stack
-
 * [Stack](/Stack)
+
+### Queue
 * [Queue](/Queue)
 
 <br>
