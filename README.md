@@ -8,8 +8,13 @@
 
 ### Stack
 
-* [ArrayStack](/Stack/ArrayStack.swift)
+* [Stack](/Stack/Stack.swift)
 
 ### LinkedList
 
 * [LinkedQueue](/LinkedList/LinkedQueue.swift)
+
+---
+<h3 align="leading">참고 자료</h3>
+
+* [swift-algorithm-club](https://github.com/kodecocodes/swift-algorithm-club)
