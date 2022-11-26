@@ -4,13 +4,15 @@
 * This repository is a swift library for Algorithm_learning and BOJ PS(Problem-Solving).
 * When you need an implementation of a specific algorithm, please let me know.
 
-## Contents
+## The Algorithms
+(공란)
 
-### Stack
-* [Stack](/Stack)
+## Data Structures
+(공란)
 
 ### Queue
-* [Queue](/Queue)
+* [Stack](/Stack). 후입선출(LIFO)!
+* [Queue](/Queue). 선입선출(FIFO)!
 
 <br>
 <h2 align="leading">참고 자료</h2>
