@@ -10,9 +10,9 @@
 
 * [Stack](/Stack/Stack.swift)
 
-### LinkedList
+### Queue
 
-* [LinkedQueue](/LinkedList/LinkedQueue.swift)
+* [Queue]()
 
 <br>
 <h2 align="leading">참고 자료</h2>
