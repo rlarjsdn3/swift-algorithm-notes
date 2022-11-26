@@ -14,7 +14,7 @@
 
 * [LinkedQueue](/LinkedList/LinkedQueue.swift)
 
----
-<h3 align="leading">참고 자료</h3>
+<br>
+<h2 align="leading">참고 자료</h2>
 
 * [swift-algorithm-club](https://github.com/kodecocodes/swift-algorithm-club)
