@@ -13,6 +13,7 @@ public struct Queue<Element> {
         array.append(element)
     }
     
+    @discardableResult
     public mutating func dequeue() -> Element? {
         guard !isEmpty else { return nil }
         
