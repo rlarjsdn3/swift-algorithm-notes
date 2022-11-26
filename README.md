@@ -5,7 +5,9 @@
 * When you need an implementation of a specific algorithm, please let me know.
 
 ## The Algorithms
-(공란)
+
+### Searching
+* [Linear Search]()
 
 ## Data Structures
 사람들이 사물을 정리하여 저장하는 것과 마찬가지로 프로그램에서도 자료들을 정리하여 보관하는 여러 가지 구조들이 있습니다. 이를 `자료구조(Data Structures)`라 부릅니다. 더 정확히 말해, 자료구조는 데이터 값의 모임, 또 데이터 간의 관계, 그리고 데이터에 적용할 수 있는 함수나 명령을 의미합니다. 신중히 선택된 자료 구조는 효율적인 알고리즘을 사용할 수 있게 합니다. 이처럼 자료구조와 알고리즘은 뗄레야 뗄 수 없는 매우 밀접한 관계를 지니고 있습니다. 효과적으로 설계된 자료구조는 실행시간 혹은 메모리 용량과 같은 자원을 최소한으로 사용하면서 연산을 수행하도록 도와줍니다.
