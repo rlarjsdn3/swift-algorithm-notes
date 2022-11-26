@@ -1,54 +1,49 @@
 struct Stack<Element> {
-    // 요소를 저장할 배열
-    fileprivate var items: [Element] = []
-    
-    // 배열에 삽입된 요소의 개수를 반환
-    public var count: Int {
-        return items.count
-    }
+    // 요소를 저장하기 위한 배열
+    fileprivate var array: [Element] = []
     
     // 배열이 비어있으면 true, 비어있지 않다면 false를 반환
     public var isEmpty: Bool {
-        return items.isEmpty
+        return array.isEmpty
     }
     
-    // 시간 복잡도: O(1)
-    // 배열의 맨 뒤에 요소 삽입
+    // 배열에 삽입된 요소의 개수를 반환
+    public var count: Int {
+        return array.count
+    }
+    
+    /**
+     * 배열의 맨 뒤에 요소를 삽입
+     * 시간 복잡도: O(1)
+     */
     public mutating func push(_ element: Element) {
-        items.append(element)
+        array.append(element)
     }
     
-    // 시간 복잡도: O(1)
-    // 배열의 맨 뒤의 요소 삭제
+    /**
+     * 배열의 맨 뒤의 요소를 삭제
+     * 시간 복잡도: O(1)
+     */
     @discardableResult
     public mutating func pop() -> Element? {
-        guard !isEmpty else {
-            return nil
-        }
-        
-        return items.removeLast()
+        return array.popLast()
     }
     
-    // 시간 복잡도: O(1)
-    // 배열의 맨 뒤의 요소 반환
-    public func peek() -> Element? {
-        guard !isEmpty else {
-            return nil
-        }
-        
-        return items.last
+    /**
+     * 배열의 맨 뒤의 요소를 반환
+     * 시간 복잡도: O(1)
+     */
+    public var top: Element? {
+        return array.last
     }
 }
 
-// 배열 요소를 출력하기 위한 확장
-extension Stack: CustomStringConvertible {
-    var description: String {
-        var text: String = "["
-        for (i, e) in items.enumerated() {
-            text += String(describing: e)
-            if i != items.count-1 { text += ", " }
+// 반복자를 반환하기 위한 확장
+extension Stack: Sequence {
+    public func makeIterator() -> AnyIterator<Element> {
+        var curr: Stack<Element> = self
+        return AnyIterator {
+            curr.pop()
         }
-        
-        return text + "]"
     }
 }
