@@ -8,7 +8,8 @@
 
 ### Stack
 
-* [Stack](/Stack/Stack.swift)
+* [Stack](/Stack)
+* [Queue](/Queue)
 
 <br>
 <h2 align="leading">참고 자료</h2>
