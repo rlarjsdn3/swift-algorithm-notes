@@ -1,6 +1,6 @@
 struct Stack<Element> {
     // 요소를 저장할 배열
-    private var items: [Element] = []
+    fileprivate var items: [Element] = []
     
     // 배열에 삽입된 요소의 개수를 반환
     public var count: Int {
