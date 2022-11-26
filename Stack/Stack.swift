@@ -1,4 +1,4 @@
-struct Stack<Element> {
+public struct Stack<Element> {
     fileprivate var array: [Element] = []
     
     public var isEmpty: Bool {
