@@ -1,5 +1,5 @@
-public struct Queue<Element> {
-    fileprivate var array: [Element?] = []
+public struct Queue<T> {
+    fileprivate var array: [T?] = []
     fileprivate var head: Int = 0
     
     public var isEmpty: Bool {
@@ -10,12 +10,12 @@ public struct Queue<Element> {
         return array.count - head
     }
     
-    public mutating func enqueue(_ element: Element) {
+    public mutating func enqueue(_ element: T) {
         array.append(element)
     }
     
     @discardableResult
-    public mutating func dequeue() -> Element? {
+    public mutating func dequeue() -> T? {
         guard let element = array[guarded: head] else {
             return nil
         }
@@ -32,7 +32,7 @@ public struct Queue<Element> {
         return element
     }
     
-    var front: Element? {
+    var front: T? {
         guard !isEmpty else {
             return nil
         }
