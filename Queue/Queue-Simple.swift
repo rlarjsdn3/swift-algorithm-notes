@@ -13,8 +13,7 @@ public struct Queue<T> {
         array.append(element)
     }
     
-    @discardableResult
-    public mutating func dequeue() -> T? {
+    @discardableResult public mutating func dequeue() -> T? {
         guard !isEmpty else { return nil }
         
         return array.removeFirst()
