@@ -13,8 +13,7 @@ public struct Stack<T> {
         array.append(element)
     }
 
-    @discardableResult
-    public mutating func pop() -> T? {
+    @discardableResult public mutating func pop() -> T? {
         return array.popLast()
     }
 
