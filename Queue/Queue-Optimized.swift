@@ -14,8 +14,7 @@ public struct Queue<T> {
         array.append(element)
     }
     
-    @discardableResult
-    public mutating func dequeue() -> T? {
+    @discardableResult public mutating func dequeue() -> T? {
         guard let element = array[guarded: head] else {
             return nil
         }
