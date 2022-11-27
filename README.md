@@ -1,4 +1,4 @@
-## Swift Algorithm Notes
+# Swift Algorithm Notes
 * 알고리즘 학습과 [백준](https://www.acmicpc.net) 문제 풀이를 위한 `스위프트` 소스코드 저장소입니다.
 * `Swift_Algorithm_Notes`는 누리집의 갖가지 정보를 짬뽕시켜 만들어진 리포지토리입니다. 피드백은 언제든 환영입니다.
 * `스위프트`에 익숙치 않으시다면 [여기](https://www.swift.org)에서 충분히 학습 후 열람해주세요. 감사합니다.
