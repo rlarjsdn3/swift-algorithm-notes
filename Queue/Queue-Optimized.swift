@@ -40,3 +40,13 @@ public struct Queue<Element> {
         return array[head]
     }
 }
+
+extension Array {
+    subscript(guarded index: Int) -> Element? {
+        guard (startIndex..<endIndex).contains(index) else {
+            return nil
+        }
+        
+        return self[index]
+    }
+}
