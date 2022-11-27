@@ -1,15 +1,15 @@
 public struct Array2D<T> {
-    public let columns: Int
     public let rows: Int
+    public let columns: Int
     fileprivate var array: [T]
     
-    public init(columns: Int, rows: Int, initialValue: T) {
-        self.columns = columns
+    public init(rows: Int, columns: Int, initialValue: T) {
         self.rows = rows
+        self.columns = columns
         array = [T](repeating: initialValue, count: rows * columns)
     }
     
-    public subscript(column: Int, row: Int) -> T {
+    public subscript(row: Int, column: Int) -> T {
         get {
             precondition(column < columns, "Column \(column) Index is out of range. Array<T>(columns: \(column), rows: \(rows))")
             precondition(row < rows, "Row \(row) Index is out of range. Array<T>(columns: \(columns), rows: \(rows))")
