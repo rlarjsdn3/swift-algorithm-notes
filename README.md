@@ -13,7 +13,7 @@
 대다수의 경우 언어 차원에서 기본적으로 제공하는 `배열`, `딕셔너리`와 `집합` 자료형으로도 충분하지만, 때로는 복잡하고 화려한 자료구조가 필요할 수도 있습니다. 어떠한 경우든, 적절한 자료구조의 선택은 필수적이라 할 수 있습니다.
 
 ### Variations on arrays
-* Array2D
+* [Array2D](/Array2D)
 * Bit Set
 * Fixed Size Array
 * Ordered Array
