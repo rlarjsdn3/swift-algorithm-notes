@@ -31,14 +31,12 @@ public struct Queue<Element> {
         
         return element
     }
-}
-
-extension Array {
-    subscript(guarded index: Int) -> Element? {
-        guard (startIndex..<endIndex).contains(index) else {
+    
+    var front: Element? {
+        guard !isEmpty else {
             return nil
         }
         
-        return self[index]
+        return array[head]
     }
 }
