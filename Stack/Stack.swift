@@ -1,5 +1,5 @@
-public struct Stack<Element> {
-    fileprivate var array: [Element] = []
+public struct Stack<T> {
+    fileprivate var array: [T] = []
     
     public var isEmpty: Bool {
         return array.isEmpty
@@ -9,23 +9,23 @@ public struct Stack<Element> {
         return array.count
     }
 
-    public mutating func push(_ element: Element) {
+    public mutating func push(_ element: T) {
         array.append(element)
     }
 
     @discardableResult
-    public mutating func pop() -> Element? {
+    public mutating func pop() -> T? {
         return array.popLast()
     }
 
-    public var top: Element? {
+    public var top: T? {
         return array.last
     }
 }
 
 extension Stack: Sequence {
-    public func makeIterator() -> AnyIterator<Element> {
-        var curr: Stack<Element> = self
+    public func makeIterator() -> AnyIterator<T> {
+        var curr: Stack<T> = self
         return AnyIterator {
             curr.pop()
         }
