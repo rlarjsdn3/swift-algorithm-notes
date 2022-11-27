@@ -29,7 +29,7 @@
 * Ring Buffer
 
 ### Lists
-* [Linked List](/Linked_List)
+* [Linked List]()
 * Skip-List
 
 ### Trees
