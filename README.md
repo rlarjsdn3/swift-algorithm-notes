@@ -29,7 +29,7 @@
 * Ring Buffer
 
 ### Lists
-* [Linked List](): 작성 中
+* [Linked List]() - 작성 中
 * Skip-List
 
 ### Trees
@@ -43,7 +43,7 @@
     + Lazy Propagation
 * KD-Tree
 * Sparse Table
-* [Heap](): 작성 中
+* [Heap]() - 작성 中
 * Fibonacci Heap
 * Trie
 * B-Tree
