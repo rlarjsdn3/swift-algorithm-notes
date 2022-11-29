@@ -24,7 +24,7 @@
 ### Queue
 * [Stack](/Stack)
 * [Queue](/Queue)
-* Deque
+* [Deque]() - 작성 中
 * Priority Queue
 * Ring Buffer
 
@@ -77,21 +77,21 @@
 ## The Algorithms
 
 ### Searching
-* Linear Search. Find an element in an array.
-* Binary Search. Quickly find elements in a sorted array.
-* Count Occurrences. Count how often a value appears in an array.
-* Select Minimum / Maximum. Find the minimum/maximum value in an array.
-* K-th Largest Element. Find the k-th largest element in an array, such as the median.
-* Selection Sampling. Randomly choose a bunch of items from a collection.
-* Union-Find. Keeps track of disjoint sets and lets you quickly merge them.
+* Linear Search
+* Binary Search
+* Count Occurrences
+* Select Minimum / Maximum
+* K-th Largest Element
+* Selection Sampling
+* Union-Find
 
 ### String Search
-* Brute-Force String Search. A naive method.
-* Boyer-Moore. A fast method to search for substrings. It skips ahead based on a look-up table, to avoid looking at every character in the text.
-* Knuth-Morris-Pratt. A linear-time string algorithm that returns indexes of all occurrencies of a given pattern.
-* Rabin-Karp Faster search by using hashing.
-* Longest Common Subsequence. Find the longest sequence of characters that appear in the same order in both strings.
-* Z-Algorithm. Finds all instances of a pattern in a String, and returns the indexes of where the pattern starts within the String.
+* Brute-Force String Search
+* Boyer-Moore
+* Knuth-Morris-Pratt
+* Rabin-Karp Faster search by using hashing
+* Longest Common Subsequence
+* Z-Algorithm
 
 ### Sorting
 
@@ -126,30 +126,31 @@ Bad sorting algorithms (don't use these!):
 
 ### Compression
 
-* Run-Length Encoding (RLE). Store repeated values as a single byte and a count.
-* Huffman Coding. Store more common elements using a smaller number of bits.
+* Run-Length Encoding (RLE)
+* Huffman Coding
 
 ### Miscellaneous
 
-* Shuffle. Randomly rearranges the contents of an array.
-* Comb Sort. An improve upon the Bubble Sort algorithm.
-* Convex Hull.
-* Miller-Rabin Primality Test. Is the number a prime number?
-* MinimumCoinChange. A showcase for dynamic programming.
-* Genetic. A simple example on how to slowly mutate a value to its ideal form, in the context of biological evolution.
-* Myers Difference Algorithm. Finding the longest common subsequence of two sequences.
+* Shuffle
+* Comb Sort
+* Convex Hull
+* Miller-Rabin Primality Test
+* MinimumCoinChange
+* Genetic
+* Myers Difference Algorithm
 
 ### Mathematics
 
-* Greatest Common Divisor (GCD). Special bonus: the least common multiple.
-* Permutations and Combinations. Get your combinatorics on!
-* Shunting Yard Algorithm. Convert infix expressions to postfix.
-* Karatsuba Multiplication. Another take on elementary multiplication.
-* Haversine Distance. Calculating the distance between 2 points from a sphere.
-* Strassen's Multiplication Matrix. Efficient way to handle matrix multiplication.
-* CounterClockWise. Determining the area of a simple polygon.
+* Greatest Common Divisor (GCD)
+* Permutations and Combinations
+* Shunting Yard Algorithm
+* Karatsuba Multiplication
+* Haversine Distance
+* Strassen's Multiplication Matrix
+* CounterClockWise
 
 <br>
 
 ## References
-* [swift-algorithm-club](https://github.com/kodecocodes/swift-algorithm-club)
+* [Wikipeida,⌜자료 구조⌟, 20221130](https://ko.wikipedia.org/wiki/자료_구조)
+* [GitHub, ⌜swift-algorithm-club⌟, 20221130](https://github.com/kodecocodes/swift-algorithm-club)
