@@ -31,7 +31,7 @@
 ### Queue
 * [Stack](/Stack)
 * [Queue](/Queue)
-* [Deque]() - 작성 中
+* [Deque](/Deque)
 * Priority Queue
 * Ring Buffer
 
