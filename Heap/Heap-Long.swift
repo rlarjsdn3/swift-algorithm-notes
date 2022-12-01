@@ -70,7 +70,7 @@ public struct Heap<T> {
         } else {
             let value: T = nodes[0]
             nodes[0] = nodes.removeLast()
-            // shiftDown(0)
+            shiftDown(0)
             return value
         }
     }
