@@ -3,7 +3,7 @@ public struct Queue<T> {
     fileprivate var head: Int = 0
     
     public var isEmpty: Bool {
-        return array.isEmpty
+        return count == 0
     }
     
     public var count: Int {
