@@ -1,9 +1,9 @@
 public struct Heap<T> {
     var nodes: [T] = []
     
+    // '>'는 최대-힙, '<'는 최소-힙
     private var orderCriteria: (T, T) -> Bool
     
-    // '>'는 최대-힙, '<'는 최소-힙
     public init(sort: @escaping (T, T) -> Bool) {
         self.orderCriteria = sort
     }
@@ -33,11 +33,11 @@ public struct Heap<T> {
     }
     
     @inline(__always) internal func leftChildIndex(ofIndex i: Int) -> Int {
-        return 2 * i + 1
+        return (i * 2) + 1
     }
     
     @inline(__always) internal func rightChildIndex(ofIndex i: Int) -> Int {
-        return 2 * i + 2
+        return (i * 2) + 2
     }
     
     public func peek() -> T? {
@@ -70,7 +70,7 @@ public struct Heap<T> {
         } else {
             let value: T = nodes[0]
             nodes[0] = nodes.removeLast()
-            shiftDown(0)
+            // shiftDown(0)
             return value
         }
     }
@@ -90,7 +90,7 @@ public struct Heap<T> {
     internal mutating func shiftUp(_ index: Int) {
         var childIndex: Int = index
         let child: T = nodes[childIndex]
-        var parentIndex: Int = self.parentIndex(ofIndex: childIndex)
+        var parentIndex: Int = self.parentIndex(ofIndex: index)
         
         while childIndex > 0 && orderCriteria(child, nodes[parentIndex]) {
             nodes[childIndex] = nodes[parentIndex]
@@ -102,8 +102,8 @@ public struct Heap<T> {
     }
     
     internal mutating func shiftDown(from index: Int, until endIndex: Int) {
-        var leftChildIndex: Int = self.leftChildIndex(ofIndex: index)
-        var rightChildIndex: Int = self.rightChildIndex(ofIndex: index)
+        let leftChildIndex: Int = self.leftChildIndex(ofIndex: index)
+        let rightChildIndex: Int = leftChildIndex + 1
         
         var first: Int = index
         if leftChildIndex < endIndex && orderCriteria(nodes[leftChildIndex], nodes[first]) {
@@ -119,7 +119,7 @@ public struct Heap<T> {
     }
     
     internal mutating func shiftDown(_ index: Int) {
-        shiftDown(from: index, until: nodes.count - 1)
+        shiftDown(from: index, until: nodes.count)
     }
 }
 
@@ -128,10 +128,11 @@ extension Heap where T: Equatable {
         return nodes.firstIndex(where: { $0 == node })
     }
     
-    @discardableResult public mutating func remove(node: T) -> T? {
-        if let index = index(of: node) {
+    @discardableResult public mutating func remove(node : T) -> T? {
+        if let index: Int = index(of: node) {
             return remove(at: index)
         }
+        
         return nil
     }
 }
