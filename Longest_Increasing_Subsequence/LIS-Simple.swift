@@ -5,7 +5,7 @@ var len: Int = array.count
 // 연산 결과를 저장하기 위한 DP 테이블 선언
 var dp: [Int] = [Int](repeating: 0, count: len)
 
-// 다이내믹 프로그래밍 수행(바텀업) - O(n^2)
+// 가장 긴 증가하는 부분 수열 구하기(DP) - O(n^2)
 for i in stride(from: 0, to: len, by: 1) {
     var count: Int = 0
     for j in stride(from: 0, to: i, by: 1) {
