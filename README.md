@@ -144,7 +144,7 @@ Bad sorting algorithms (don't use these!):
 * MinimumCoinChange
 * Genetic
 * Myers Difference Algorithm
-* LIS(Longest Increasing Subsequence)[]
+* [Longest Increasing Subsequence (LIS)](/Longest_Increasing_Subsequence)
 
 ### 수학(Mathematics)
 
