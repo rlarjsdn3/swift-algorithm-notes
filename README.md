@@ -35,7 +35,7 @@
 * Ring Buffer
 
 ### 리스트(List)
-* [Linked List]() - 작성 中
+* [Linked List](/Linked List)
 * Skip-List
 
 ### 트리(Tree)
