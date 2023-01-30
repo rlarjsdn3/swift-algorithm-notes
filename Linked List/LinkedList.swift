@@ -1,6 +1,5 @@
 public final class LinkedList<T> {
     
-    // Linked List's Node Class Declaration
     public class LinkedListNode<T> {
         var value: T
         var next: LinkedListNode?
@@ -11,16 +10,16 @@ public final class LinkedList<T> {
         }
     }
     
-    public typealias Node = LinkedList<T>.LinkedListNode<T>
+    public typealias Node = LinkedListNode<T>
     
     private(set) var head: Node?
     
     public var last: Node? {
-        guard var node: Node = head else {
+        guard var node = head else {
             return nil
         }
         
-        while let next: Node = node.next {
+        while let next = node.next {
             node = next
         }
         return node
@@ -31,13 +30,14 @@ public final class LinkedList<T> {
     }
     
     public var count: Int {
-        guard var node: Node = head else {
+        guard var node = head else {
             return 0
         }
         
-        var count: Int = 1
-        while let next: Node = node.next {
+        var count = 1
+        while let next = node.next {
             node = next
+            count += 1
         }
         return count
     }
@@ -51,12 +51,12 @@ public final class LinkedList<T> {
     
     public func node(at index: Int) -> Node {
         assert(head != nil, "List is empty")
-        assert(index >= 0, "Index must be greater or eqal to 0")
+        assert(index >= 0, "index must be greater or equal to 0")
         
         if index == 0 {
             return head!
         } else {
-            var node: Node? = head?.next
+            var node = head!.next
             for _ in 1..<index {
                 node = node?.next
                 if node == nil {
@@ -64,18 +64,18 @@ public final class LinkedList<T> {
                 }
             }
             
-            assert(node != nil, "Index is out of bounds")
+            assert(node != nil, "index is out of bounds")
             return node!
         }
     }
     
     public func append(_ value: T) {
-        let newNode: Node = Node(value: value)
+        let newNode = Node(value: value)
         append(newNode)
     }
     
     public func append(_ node: Node) {
-        let newNode: Node = node
+        let newNode = node
         if let lastNode = last {
             newNode.previous = lastNode
             lastNode.next = newNode
@@ -84,16 +84,8 @@ public final class LinkedList<T> {
         }
     }
     
-    public func append(_ list: LinkedList) {
-        var nodeToCopy: Node? = list.head
-        while let node: Node = nodeToCopy {
-            append(node.value)
-            nodeToCopy = node.next
-        }
-    }
-    
     public func insert(_ value: T, at index: Int) {
-        let newNode: Node = Node(value: value)
+        let newNode = Node(value: value)
         insert(newNode, at: index)
     }
     
@@ -103,8 +95,8 @@ public final class LinkedList<T> {
             head?.previous = newNode
             head = newNode
         } else {
-            let prev: Node = node(at: index - 1)
-            let next: Node? = prev.next
+            let prev = node(at: index - 1)
+            let next = prev.next
             
             newNode.previous = prev
             newNode.next = next
@@ -120,11 +112,12 @@ public final class LinkedList<T> {
             list.last?.next = head
             head = list.head
         } else {
-            let prev: Node = node(at: index - 1)
-            let next: Node? = prev.next
+            let prev = node(at: index - 1)
+            let next = prev.next
             
             prev.next = list.head
             list.head?.previous = prev
+            
             list.last?.next = next
             next?.previous = list.last
         }
@@ -135,8 +128,8 @@ public final class LinkedList<T> {
     }
     
     @discardableResult public func remove(node: Node) -> T {
-        let prev: Node? = node.previous
-        let next: Node? = node.next
+        let prev = node.previous
+        let next = node.next
         
         if let prev = prev {
             prev.next = next
@@ -156,30 +149,71 @@ public final class LinkedList<T> {
     }
     
     @discardableResult public func remove(at index: Int) -> T {
-        let node: Node = node(at: index)
+        let node = self.node(at: index)
         return remove(node: node)
     }
 }
 
 extension LinkedList: CustomStringConvertible {
     public var description: String {
-        var text: String = "["
-        var node: Node? = head
-        while let nd: Node = node {
-            text += "\(nd.value)"
+        var s = "["
+        var node = head
+        while let nd = node {
+            s += "\(nd.value)"
             node = nd.next
-            if node != nil { text += ", " }
+            if node != nil { s += ", " }
         }
-        return text + "]"
+        return s + "]"
     }
 }
 
 extension LinkedList {
     public func reverse() {
-        var node: Node? = head
-        while let currentNode: Node = node {
+        var node = head
+        while let currentNode = node {
             node = currentNode.next
-            // ...
+            swap(&currentNode.previous, &currentNode.next)
+            head = currentNode
         }
+    }
+}
+
+extension LinkedList {
+    public func map<U>(transform: (T) -> U) -> LinkedList<U> {
+        let result = LinkedList<U>()
+        var node = head
+        while let nd = node {
+            result.append(transform(nd.value))
+            node = nd.next
+        }
+        return result
+    }
+    
+    public func filter(predicate: (T) -> Bool) -> LinkedList<T> {
+        let result = LinkedList<T>()
+        var node = head
+        while let nd = node {
+            if predicate(nd.value) {
+                result.append(nd.value)
+            }
+            node = nd.next
+        }
+        return result
+    }
+}
+
+extension LinkedList {
+    convenience init(array: Array<T>) {
+        self.init()
+        
+        array.forEach { append($0) }
+    }
+}
+
+extension LinkedList: ExpressibleByArrayLiteral {
+    public convenience init(arrayLiteral elements: T...) {
+        self.init()
+        
+        elements.forEach { append($0) }
     }
 }
