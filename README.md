@@ -34,7 +34,7 @@
 * Ring Buffer
 
 ### 리스트(List)
-* [Linked List](/Linked List)
+* [Linked List](/Linked_List)
 * Skip-List
 
 ### 트리(Tree)
@@ -82,7 +82,7 @@
 ## 알고리즘
 
 ### 탐색(Searching)
-* Linear Search
+* [Linear Search](/Linear_Search)
 * Binary Search
 * Count Occurrences
 * Select Minimum / Maximum
