@@ -136,7 +136,7 @@ Bad sorting algorithms (don't use these!):
 
 ### 잡동사니(Miscellaneous)
 
-* Shuffle
+* [Shuffle](\Shuffle)
 * Comb Sort
 * Convex Hull
 * Miller-Rabin Primality Test
